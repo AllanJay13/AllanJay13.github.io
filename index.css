@@ -23,6 +23,7 @@ header{
 }
 header .logo{
     width: 137px;
+    cursor: pointer;
 }
 header .navbar ul{
     list-style: none;
