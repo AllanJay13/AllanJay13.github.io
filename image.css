@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    border: 1px solid black;
+    padding: 0px;
+}
+
+.navbar-nav{
+    font-weight: bold;
+}
+.navbar-nav .navbar-item:hover{
+    display: flex;
+    background-color: #333;
+    color: #ffffff;
+}
+.carousel-inner{
+    background-color: #333;
+}
+.carousel-inner h2{
+    text-shadow: 2px 2px #a5a7f1;
+    font-weight: bold;
+}
+.carousel-inner p{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.d-block{
+    opacity: 0.5;    
+}
+.row .card{
+    border: 1px solid black;
+}
