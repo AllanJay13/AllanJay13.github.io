@@ -5,88 +5,457 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skater</title>
-    <link rel="stylesheet" href="Skater.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    body{
+        background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(imagehome/skt.jpeg);
+    }
+    
+    .navbar{
+        padding: 0px;
+    }
+    
+    .navbar-nav{
+        font-weight: bolder;
+    }
+    .navbar-nav .navbar-item:hover{
+        display: flex;
+        background-color: #333;
+        color: #ffffff;
+    }
+    .pic{
+        position: flex;
+        width: 100%;
+        height: 40vh;
+        background-image:url(imagehome/skatemag.jpg);
+        background-size: cover;
+        border: 1px solid black;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        text-shadow: 6px 0 8px #48c8f0;
+        text-align: center;
+        font-size: 80px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h2{
+        text-shadow: 6px 0 6px gray;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: -80px;
+    }
+    
+    p{
+        font-size: 13px;
+        line-height: 20px;
+        margin: 5px 20px;
+        padding: 15px;
+    }
+    .row .side{
+        flex: 50%;
+        border-radius: 5px;
+    }
+    .row .side .cont1{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont1 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px;
+        width: 200px;
+    }
+    .row .side .cont1 .btn1{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:10px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn1:hover{
+        background-color: #95959c;
+    }
+    .row .side .cont2{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont2 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px; 
+        width: 200px;
+    }
+    .row .side .cont2 .btn2{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:10px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn2:hover{
+        background-color: #95959c;
+    }
+    .row .side .cont3{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont3 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px;
+        width: 200px;
+    }
+    .row .side .cont3 .btn3{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:10px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn3:hover{
+        background-color: #95959c;
+    }
+    .row .main{
+        flex: 50%;
+        border-radius: 5px;
+    }
+    .row .main .cont4{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont4 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px; 
+        width: 200px;
+        height: 200px;
+    }
+    .row .main .cont4 .btn4{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:10px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn4:hover{
+        background-color: #95959c;
+    }
+    .row .main .cont5{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont5 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px; 
+        width: 200px;
+        height: 200px;
+    }
+    .row .main .cont5 .btn5{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:10px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn5:hover{
+        background-color: #95959c;
+    }
+    .row .main .cont6{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    .cont6 .img{
+        border: 2px solid black;
+        margin-top: 20px;
+        margin-left: 150px; 
+        width: 200px;
+        height: 190px;
+    }
+    .row .main .cont6 .btn6{
+        width: 90px;
+        padding: 5px 0;
+        text-align: center;
+        margin:8px 10px;
+        margin-left: 200px;
+        border-radius: 25px;
+        font-weight: bold;
+    }
+    .btn6:hover{
+        background-color: #95959c;
+    }
+    
+    
+    footer{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: 5vh;
+        background: #080808;
+        color: white;
+    }
+    footer h5{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-right: 10px;
+    
+    
+    }
+    .box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box .fa{
+        flex: 10%;
+        margin-top: 9px;
+        margin-left: 15px;
+    }
+    .fa {
+        padding: 10px;
+        width: 50px;
+        text-decoration: none;
+        margin: 5px 5px;
+        opacity: 0.5;
+      }
+      .fa:hover {
+        opacity: 1;
+    }
+    
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+      
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+      .fa-youtube {
+        background: #bb0000;
+        color: white;
+      }
+      .box .linkmage{
+        flex:80%;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: -10px;
+        border-radius: 15px;
+    }
+    .box .linkmage img{
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+    }
+    footer p{
+        margin: 0px 0px;
+        padding: 0px;
+    }
+    @media screen and (max-width:991px){
+    .cont1 .img{
+    
+    margin-left: 130px;
+    }
+    h2 {
+    margin-left: -11px;
+    }
+    .pic{
+    width: 100%;
+    height: 30vh;
+    }
+    .box .fa{
+    display: none;
+    }
+    .box .linkmage{
+    margin-top: 20px;
+    margin-left: 160px;
+    }
+    .box .linkmage img{
+    margin: 25px;
+    }
+    }
+    @media screen and (min-width:300px) and (max-width:600px){
+    .pic{
+    display: none;
+    }
+    p{
+    font-size: 15px;
+    line-height: 23px;
+    }
+    .cont1 .img{
+    border: 3px solid black;
+    margin-left: 51px;
+    width: 280px;
+    }
+    .row .side .cont1 .btn1{
+    margin-left:170px;
+    }
+    .cont2 .img{
+    border: 3px solid black;
+    margin-left: 51px;
+    width: 280px;
+    }
+    .row .side .cont2 .btn2{
+    margin-left: 170px;
+    }
+    .cont3 .img{
+    border: 3px solid black;
+    margin-left: 44px;
+    width: 280px;
+    }
+    .row .side .cont3 .btn3{
+    margin-left: 170px;
+    }
+    .cont4 .img{
+    border: 3px solid black;
+    margin-left: 44px;
+    width: 280px;
+    }
+    .row .main .cont4 .btn4{
+    margin-left: 170px;
+    }
+    .cont5 .img{
+    border: 3px solid black;
+    margin-left: 44px;
+    width: 280px;
+    }
+    .row .main .cont5 .btn5{
+    margin-left: 170px;
+    }
+    .cont6 .img{
+    border: 3px solid black;
+    margin-left: 44px;
+    width: 280px;
+    }
+    .row .main .cont6 .btn6{
+    margin-left: 170px;
+    }
+    
+    .box .fa{
+    display: none;
+    }
+    .box .linkmage{
+    margin-left: 50px;
+    }
+    
+    }
+    </style>
+
 </head>
 <body>
-    <header>
-        <img src="imagehome/logo.png.png"  class="logo">
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar"><b>MENU</b></label>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="image.html">IMAGE</a></li>
-                <li><a href="videos.html">VIDEO</a></li>
-                <li><a href="contactUs.html">CONTACT US</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Skateboarding">MORE INFO</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="pic"></div>
-    
-    <h1> Most Famous Skater</h1>
-    
-    <div class="row">
-        <div class="side">
-            <div class="cont1">
-                <img class="img" src="imagehome/tonyhawk.jpg" alt="Italian Trulli">
-                <h2>Tony Hawk</h2>
-                <p><b>Anthony Frank Hawk</b> (born May 12, 1968), nicknamed Birdman, is an American professional skateboarder, entrepreneur, 
-                and the owner of the skateboard company Birdhouse. A pioneer of modern vertical skateboarding, Hawk completed the 
-                first documented "900" skateboarding trick in 1999. He also licensed a skateboarding video game series named after him published by 
-                Activision that same year. He retired from competing professionally in 2003 and is regarded as one of the most influential skateboarders of all time.</p>
-                
-                <button class="btn1"><a href="https://en.wikipedia.org/wiki/Tony_Hawk">More</a></button>
-                
-            </div>
-            <div class="cont2">
-                <img class="img" src="imagehome/mullen.jpg" alt="Italian Trulli">
-                <h2>Rodney Mullen</h2>
-                <p><b>John Rodney Mullen</b> (born August 17, 1966) is an American professional skateboarder who practices freestyle skateboarding and street 
-                skateboarding. He is considered one of the most influential skaters in the history of the sport, being credited for inventing numerous tricks, including the flatground ollie, kickflip, heelflip, impossible, and 360-flip. As a result, he has been called the "Godfather of modern street skating."</p>
-                
-                <button class="btn2"><a href="https://en.wikipedia.org/wiki/Rodney_Mullen">More</a></button>
-                
-            </div>
-            <div class="cont3">
-                <img class="img" src="imagehome/alva.jpg" alt="Italian Trulli">
-                <h2>Tony Alva</h2>
-                <p><b>Tony Alva</b> (born September 2, 1957) is an American skateboarder, entrepreneur, and musician. He was a pioneer of vertical skateboarding and one of the original members of the Zephyr Competition Skateboarding Team, also known as the Z-Boys. The Transworld Skateboarding Magazine ranked him eighth
-                in its list of the "30 Most Influential skateboarders" of all time.</p>     
-                    <button class="btn3"><a href="https://en.wikipedia.org/wiki/Tony_Alva">More</a></button>
-            </div>
-        </div>
-        
-        <div class="main">
-            <div class="cont4">
-                <img class="img" src="imagehome/paulrod.jpg" alt="Italian Trulli">
-                <h2>Paul Rodriguez</h2>
-                <p><b>Paul Martin Rodriguez Jr.</b> (born December 31, 1984), also known by his nickname P-Rod, is an American professional street skateboarder, 
-                actor, rapper, and recording artist. Rodriguez has won a total of eight medals at the X Games, four of them gold, with the most recent first-place victory occurring in Los Angeles, California in July 2012.
-                Rodriguez was born in Tarzana, U.S. His father is actor/comedian Paul Rodriguez, and his mother is Laura Martinez. He also has an older sister Nikole and a younger brother Lucas.</p>
-                <button class="btn4"><a href="https://en.wikipedia.org/wiki/Paul_Rodriguez_(skateboarder)">More</a></button>
-            </div>
-            <div class="cont5">
-                <img class="img" src="imagehome/nyjah.jpg" alt="Italian Trulli">
-                <h2>Nyjah Imani Huston</h2>
-                <p><b>Nyjah Imani Huston</b> (born November 30, 1994) is an American professional skateboarder. With numerous sponsorships and competition prize winnings, Huston is one of the highest paid skateboarders in the world. Huston won gold medals at the SLS Super Crown World Championship in 2014, 2017 
-                to 2019, and has won 12 gold medals at the X Games since 2011</p>
-                <button class="btn5"><a href="https://en.wikipedia.org/wiki/Nyjah_Huston">More</a></button>
-            </div>
-            <div class="cont6">
-                <img class="img" src="imagehome/leticia.jpg" alt="Italian Trulli">
-                <h2>Letícia Bufoni</h2>
-                <p><b>Letícia Bufoni e Silva</b> (born April 13, 1993) is a Brazilian-American professional street skateboarder. She is a six-time X Games gold medalist.
-                    Bufoni was born in São Paulo. She began skating at age nine,and her grandmother bought her first skateboard when she was 11.
-                    At the age of 14, Bufoni moved to the United States with older friends, and she attended Hollywood High School.</p>
-                <button class="btn6"><a href="https://en.wikipedia.org/wiki/Let%C3%ADcia_Bufoni">More</a></button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="imagehome/logo.png.png" alt="logo" width="137px"></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="navbar-nav ms-auto">
+                <a href="index.html" class="navbar-item nav-link p-4">HOME</a>
+                <a href="image.html" class="navbar-item nav-link p-4">IMAGE</a>
+                <a href="videos.html" class="navbar-item nav-link p-4">VIDEO</a>
+                <a href="contactUs.html" class="navbar-item nav-link p-4">CONTACT US</a>
+                <a href="https://en.wikipedia.org/wiki/Skateboarding" class="navbar-item nav-link p-4">MORE INFO</a>
             </div>
         </div>
     </div>
+   </nav>
+    <div class="pic"></div>
+   
+    <h1> Most Famous Skater</h1>
+    <div class="row">
+     <div class="side">
+         <div class="cont1">
+             <img class="img" src="imagehome/tonyhawk.jpg" alt="Italian Trulli">
+             <h2>Tony Hawk</h2>
+             <p><b>Anthony Frank Hawk</b> (born May 12, 1968), nicknamed Birdman, is an American professional skateboarder, entrepreneur, 
+             and the owner of the skateboard company Birdhouse. A pioneer of modern vertical skateboarding, Hawk completed the 
+             first documented "900" skateboarding trick in 1999. He also licensed a skateboarding video game series named after him published by 
+             Activision that same year. He retired from competing professionally in 2003 and is regarded as one of the most influential skateboarders of all time.</p>
+             
+             <button class="btn1"><a href="https://en.wikipedia.org/wiki/Tony_Hawk">More</a></button>
+             
+         </div>
+         <div class="cont2">
+             <img class="img" src="imagehome/mullen.jpg" alt="Italian Trulli">
+             <h2>Rodney Mullen</h2>
+             <p><b>John Rodney Mullen</b> (born August 17, 1966) is an American professional skateboarder who practices freestyle skateboarding and street 
+             skateboarding. He is considered one of the most influential skaters in the history of the sport, being credited for inventing numerous tricks, including the flatground ollie, kickflip, heelflip, impossible, and 360-flip. As a result, he has been called the "Godfather of modern street skating."</p>
+             
+             <button class="btn2"><a href="https://en.wikipedia.org/wiki/Rodney_Mullen">More</a></button>
+             
+         </div>
+         <div class="cont3">
+             <img class="img" src="imagehome/alva.jpg" alt="Italian Trulli">
+             <h2>Tony Alva</h2>
+             <p><b>Tony Alva</b> (born September 2, 1957) is an American skateboarder, and musician. He was a pioneer of vertical skateboarding and one of the original members of the Zephyr Competition Skateboarding Team, also known as the Z-Boys. The Transworld Skateboarding Magazine ranked him eighth
+             in its list of the "30 Most Influential skateboarders" of all time.</p>     
+                 <button class="btn3"><a href="https://en.wikipedia.org/wiki/Tony_Alva">More</a></button>
+         </div>
+     </div>
+     
+     <div class="main">
+         <div class="cont4">
+             <img class="img" src="imagehome/paulrod.jpg" alt="Italian Trulli">
+             <h2>Paul Rodriguez</h2>
+             <p><b>Paul Martin Rodriguez Jr.</b> (born December 31, 1984), also known by his nickname P-Rod, is an American professional street skateboarder, 
+             actor, rapper, and recording artist. Rodriguez has won a total of eight medals at the X Games, four of them gold, with the most recent first-place victory occurring in Los Angeles, California in July 2012.
+             Rodriguez was born in Tarzana, U.S. His father is actor/comedian Paul Rodriguez, and his mother is Laura Martinez. He also has an older sister Nikole and a younger brother Lucas.</p>
+             <button class="btn4"><a href="https://en.wikipedia.org/wiki/Paul_Rodriguez_(skateboarder)">More</a></button>
+         </div>
+         <div class="cont5">
+             <img class="img" src="imagehome/nyjah.jpg" alt="Italian Trulli">
+             <h2>Nyjah Imani Huston</h2>
+             <p><b>Nyjah Imani Huston</b> (born November 30, 1994) is an American professional skateboarder. With numerous sponsorships and competition prize winnings, Huston is one of the highest paid skateboarders in the world. Huston won gold medals at the SLS Super Crown World Championship in 2014, 2017 
+             to 2019, and has won 12 gold medals at the X Games since 2011 Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, delectus.</p>
+             <button class="btn5"><a href="https://en.wikipedia.org/wiki/Nyjah_Huston">More</a></button>
+         </div>
+         <div class="cont6">
+             <img class="img" src="imagehome/leticia.jpg" alt="Italian Trulli">
+             <h2>Letícia Bufoni</h2>
+             <p><b>Letícia Bufoni e Silva</b> (born April 13, 1993) is a Brazilian-American professional street skateboarder. She is a six-time X Games gold medalist.
+                 Bufoni was born in São Paulo. She began skating at age nine,and her grandmother bought her first skateboard when she was 11.
+                 At the age of 14, Bufoni moved to the United States with older friends.</p>
+             <button class="btn6"><a href="https://en.wikipedia.org/wiki/Let%C3%ADcia_Bufoni">More</a></button>
+         </div>
+     </div>
+ </div>
+
     <div class="box">
     <div class="fa">
         <a href="https://www.facebook.com" class="fa fa-facebook"></a><br>
@@ -109,8 +478,17 @@
             </a>
     </div>
     </div>
-    <footer>
-        <h5>&copy Copy Right All Right Reserve 2023</h5>
+
+    <footer class="row bg-dark text white mx-0">
+        <div class="col p-0">
+            <p>&copy Copyright All Right Reserve 2023</p>
+        </div>
+        <div class="col-auto">
+            <p>Privacy Policy | Terms of Use</p>  
+        </div> 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
